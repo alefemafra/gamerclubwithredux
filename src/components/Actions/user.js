@@ -1,6 +1,6 @@
-import { Constants } from '../Constants';
-import { userService } from '../Services';
-import { alertActions } from '../Actions';
+import { Constants } from '../constants';
+import { userService } from '../services';
+import { alertActions } from '.';
 
 export const Actions = {
     getAllInformation

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Actions } from '../Actions';
+import { Actions } from '../actions';
 // import { Container } from './styles';
 
-class Dashboard extends Component {
+class MiniDashboard extends Component {
 
     constructor(props){
         super(props);
@@ -17,7 +17,7 @@ class Dashboard extends Component {
 
     render() {
         const { data } = this.props;
-        console.log(data.items)
+
         return (
             <>
                 {data.loading && <em>Loading</em>}
@@ -36,4 +36,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(Dashboard);
+export default connect(mapStateToProps)(MiniDashboard);

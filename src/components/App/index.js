@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
-import Dashboard from '../Dashboard'
+import MiniDashboard from '../mini-dashboard'
 
 function App() {
   return (
     <div className="App">
 
-      <Dashboard />
+      <MiniDashboard />
       
     </div>
   );
