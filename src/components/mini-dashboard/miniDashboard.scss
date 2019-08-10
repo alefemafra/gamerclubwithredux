@@ -1,0 +1,11 @@
+.mini-dashboard {
+    width: 1172px;
+    min-height: 370px;
+    background-color: #27293c;
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333548;
+    border-radius: 2px;
+    display: grid;
+    grid-template-rows: 93px auto 53px;
+    grid-template-columns: 100%;
+}

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Actions } from '../actions';
-// import { Container } from './styles';
+import './miniDashboard.scss';
+import Header from './header';
+import Footer from './footer';
 
 class MiniDashboard extends Component {
 
@@ -9,21 +11,23 @@ class MiniDashboard extends Component {
         super(props);
         
         this.props.dispatch(Actions.getAllInformation());
-
-        this.state = {
-            items: ''
-        }
     }
 
     render() {
         const { data } = this.props;
 
         return (
-            <>
-                {data.loading && <em>Loading</em>}
+            <div className="mini-dashboard">
+                {(!data.loading) ? data.items && 
+                <>
+                    <Header userInfo={data.items.user} />
+                    <Footer online={data.items.online} banned={data.items.latest_banned} />
+                </>
+                : ''}
                 {data.error && <span className="text-danger">ERROR: {data.error}</span>}
-                {data.items && data.items.user.name}
-            </>
+
+                
+            </div>
         );
     }
 }

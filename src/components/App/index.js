@@ -1,13 +1,11 @@
 import React from 'react';
-import './App.scss';
+import './app.scss';
 import MiniDashboard from '../mini-dashboard'
 
 function App() {
   return (
-    <div className="App">
-
+    <div className="app">
       <MiniDashboard />
-      
     </div>
   );
 }
