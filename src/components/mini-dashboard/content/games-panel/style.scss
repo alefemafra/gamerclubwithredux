@@ -36,6 +36,9 @@
             background: linear-gradient(-180deg, rgba(238, 238, 238, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
             border-radius: 2px;
             margin-left: 5px;
+            @media screen and (max-width: 325px) {
+                width: 85px;
+            }
             &:first-child {
                 margin-left: 0px;
             }
@@ -88,6 +91,19 @@
                 box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), 0px 6px 6px -3px rgba(0, 0, 0, 0.25);
                 padding: 4.5px 0;
                 margin: 0;
+                transition: .5s;
+                &.lobby {
+                    background-color: #ddbc39;
+                    &:hover {
+                        background-color: #e4b705;
+                    }
+                }
+                &.ranked {
+                    background-color: #2c97de;
+                    &:hover {
+                        background-color: #0086de;
+                    }
+                }
                 span {
                     color: rgb(255, 255, 255);
                     font-family: "Teko", sans-serif;

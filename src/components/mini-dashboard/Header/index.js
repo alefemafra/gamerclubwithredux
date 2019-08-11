@@ -52,38 +52,38 @@ class Header extends Component {
 		return(
 			<div className="header-content">
 				<section>
-				<div className="user-info">
-					<div className="user-picture">
-						{(this.state.info.picture !== '' && this.state.info.picture !== undefined) ? 
-						<img src={this.state.info.picture} alt={this.state.info.name} /> : 
-						<img src={iconuser} alt={this.state.info.name}/> }
+					<div className="user-info">
+						<div className="user-picture">
+							{(this.state.info.picture !== '' && this.state.info.picture !== undefined) ? 
+							<img src={this.state.info.picture} alt={this.state.info.name} /> : 
+							<img src={iconuser} alt={this.state.info.name}/> }
+						</div>
+						<div className="user-name">
+							<h3>{this.shortName(this.state.info.name)}</h3>
+							<p>GC ID: {this.state.info.id}</p>
+						</div>
 					</div>
-					<div className="user-name">
-						<h3>{this.shortName(this.state.info.name)}</h3>
-						<p>GC ID: {this.state.info.id}</p>
+					<Progress level={this.levelDefined(this.state.info.expertise)}/>
+					<div className="achievements">
+						<ul>
+							<li className="item">
+								{this.state.featuredMedal.image && <img src={this.state.info.featured_medal.image} alt={this.state.info.featured_medal.title} />}
+							</li>
+							<li className="item">
+								{this.state.gamePosition.image && <img src={this.state.info.game_position.image} alt={this.state.info.game_position.title} />}
+							</li>
+							<li className="item">
+								<img src={this.state.info.patent} alt="patent" />
+							</li>
+							<li className="item level">
+								<p>{this.state.info.level}</p>
+							</li>
+						</ul>
 					</div>
-				</div>
-				<Progress level={this.levelDefined(this.state.info.expertise)}/>
-				<div className="achievements">
-					<ul>
-						<li className="item">
-							{this.state.featuredMedal.image && <img src={this.state.info.featured_medal.image} alt={this.state.info.featured_medal.title} />}
-						</li>
-						<li className="item">
-							{this.state.gamePosition.image && <img src={this.state.info.game_position.image} alt={this.state.info.game_position.title} />}
-						</li>
-						<li className="item">
-							<img src={this.state.info.patent} alt="patent" />
-						</li>
-						<li className="item level">
-							<p>{this.state.info.level}</p>
-						</li>
-					</ul>
-				</div>
 				</section>
 				<section className="medal-section">
 					<div className="medal">
-						<img src={medal} />
+						<img src={medal} alt="medal"/>
 					</div>
 				</section>
 			</div>

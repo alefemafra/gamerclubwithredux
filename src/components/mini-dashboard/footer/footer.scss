@@ -28,10 +28,22 @@ sans-serif;
         text-decoration: none;
         transition: .5s;
         margin-left: 10px;
+        @media screen and (max-width: 644px) {
+            width: 50px;
+            span {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            display: none;
+        }
         svg {
             margin-right: 10px;
             path {
                 fill: #b6b8c6;
+            }
+            @media screen and (max-width: 644px) {
+                margin-right: 0px;
             }
         }
         &:hover {
@@ -76,6 +88,11 @@ sans-serif;
             }
             .banned {
                 color: rgb(235, 47, 47);
+            }
+            p.banned {
+                @media screen and (max-width: 350px) {
+                    display: none;
+                }
             }
         }
     }

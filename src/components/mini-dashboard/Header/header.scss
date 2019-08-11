@@ -101,11 +101,20 @@ sans-serif;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    @media screen and (max-width: 1170px) {
+        background-size: 200%;
+    }
+    @media screen and (max-width: 590px) {
+        background-size: 400%;
+    }
     section {
         padding: 0 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 350px) {
+            padding: 0 5px;
+        }
         &:first-child {
             width: 100%;
         }
@@ -141,6 +150,9 @@ sans-serif;
         }
         .progress-bar {
             width: 513px;
+            @media screen and (max-width: 1170px) {
+                display: none;
+            }
             .top {
                 @extend %levels;
                 display: flex;
@@ -220,6 +232,9 @@ sans-serif;
             }
         }
         .achievements {
+            @media screen and (max-width: 639px) {
+                display: none;
+            }
             ul {
                 display: flex;
                 align-items: center;

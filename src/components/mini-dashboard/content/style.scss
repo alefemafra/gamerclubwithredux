@@ -1,5 +1,72 @@
 .content {
+    display: flex;
+    justify-content: space-around;
+    @media screen and (max-width: 1170px) {
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+    .serve-list {
+        margin-top: 10px;
+        max-width: 530px;
+        margin-left: 10px;
+        @media screen and (max-width: 1170px) {
+            max-width: 100%;
+            width: 95%;
+            margin: 20px 0;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            .icon {
+                margin-right: 10px;
+                img {
+                    max-width: 26px;
+                    max-height: 25px;
+                }
+            }
+            h4 {
+                width: 100%;
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-family: "Teko", sans-serif;
+                margin: 0;
+            }
+        }
+        .list {
+            .carousel-with-dots {
+                padding-bottom: 30px;
+                .react-multi-carousel-dot-list {
+                    bottom: 6px;
+                    .react-multi-carousel-dot {
+                        button {
+                            border-radius: 0px;
+                            height: 3px;
+                            width: 27px;
+                            border: 0;
+                            background: rgba(255, 255, 255, 0.1);
+                        }
+                    }
+                    .react-multi-carousel-dot--active {
+                        button {
+                            background: rgba(255, 255, 255, 0.44);
+                        }
+                    }
+                }
+            }
+        }
+    }
     .games-list {
         display: flex;
+        @media screen and (max-width: 1170px) {
+            flex-flow: row wrap;
+            justify-content: space-around;
+            width: 95%;
+            .game-info-general {
+                border-left: 0px solid rgba(255, 255, 255, 0.24);
+            }
+        }
     }
 }
