@@ -1,0 +1,126 @@
+.game-info-general {
+    padding: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.24);
+    display: flex;
+    flex-direction: column;
+    .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .icon {
+            margin-right: 10px;
+            img {
+                max-width: 26px;
+                max-height: 25px;
+            }
+        }
+        h4 {
+            width: 100%;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: "Teko", sans-serif;
+            margin: 0;
+        }
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            display: flex;
+            flex-flow: column;
+            width: 93px;
+            height: 103px;
+            background: linear-gradient(-180deg, rgba(238, 238, 238, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 2px;
+            margin-left: 5px;
+            &:first-child {
+                margin-left: 0px;
+            }
+            p {
+                margin: 0;
+                padding: 0 10px;
+                font-family: "Teko", sans-serif;
+                font-size: 17px;
+                text-transform: uppercase;
+                color: #fff;
+                &:first-child {
+                    margin-top: 20px;
+                    font-size: 37px;
+                    line-height: 30px;
+                }
+            }
+            &.matches {
+                p {
+                    &:first-child {
+                        color: rgb(221, 188, 57);
+                    }
+                }
+            }
+            &.win {
+                p {
+                    &:first-child {
+                        color: rgb(146, 170, 0);
+                    }
+                }
+            }
+            &.lose {
+                p {
+                    &:first-child {
+                        color: rgb(252, 53, 55);
+                    }
+                }
+            }
+        }
+    }
+    .button {
+        a {
+            text-decoration: none;
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2px;
+                background: linear-gradient(-180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), 0px 6px 6px -3px rgba(0, 0, 0, 0.25);
+                padding: 4.5px 0;
+                margin: 0;
+                span {
+                    color: rgb(255, 255, 255);
+                    font-family: "Teko", sans-serif;
+                    font-size: 20px;
+                    font-weight: normal;
+                    letter-spacing: 0px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    &.icon {
+                        display: flex;
+                        align-items: flex-end;
+                        line-height: 12px;
+                        font-size: 25px;
+                        &:before {
+                            display: inline-block;
+                            content: '';
+                            width: 17px;
+                            height: 13px;
+                            background-image: url('../../../../assets/img/users.png');
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            margin-right: 5px;
+                        }
+                        &:after {
+                            display: inline-block;
+                            content: '|';
+                            font-size: 22px;
+                            margin: 0 10px;
+                            color: rgba(255, 255, 255, 0.24);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
