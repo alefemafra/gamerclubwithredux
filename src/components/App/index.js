@@ -1,5 +1,5 @@
 import React from 'react';
-import './app.scss';
+import './App.scss';
 import MiniDashboard from '../mini-dashboard'
 
 function App() {
