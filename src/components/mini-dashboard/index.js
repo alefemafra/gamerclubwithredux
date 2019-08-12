@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Actions } from '../actions';
-import Header from './header';
+import { Actions } from '../Actions';
+import Header from './Header';
 import Content from './content';
 import Footer from './footer';
 import './miniDashboard.scss';

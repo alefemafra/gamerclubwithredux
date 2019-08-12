@@ -1,4 +1,4 @@
-import { Constants } from '../constants';
+import { Constants } from '../Constants';
 
 export function data(state = {}, action) {
   switch (action.type) {
